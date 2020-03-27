@@ -44,7 +44,7 @@ import (
 
 func main() {
 	b := sbpool.AcquireStringsBuilder()
-    defer sbpool.ReleaseStringsBuilder(b)
+	defer sbpool.ReleaseStringsBuilder(b)
 	var wait sync.WaitGroup
 	for i := 0; i < 10000; i++ {
 		wait.Add(1)
