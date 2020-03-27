@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/ergopkg/sbpool.svg)](https://travis-ci.org/valyala/fastrand)
+[![GoDoc](https://godoc.org/github.com/ergopkg/sbpool?status.svg)](http://godoc.org/github.com/valyala/fastrand)
+[![Go Report](https://goreportcard.com/badge/github.com/ergopkg/sbpool)](https://goreportcard.com/report/github.com/valyala/fastrand)
+
 # sbpool
 Easy to use strings builder pool
 
