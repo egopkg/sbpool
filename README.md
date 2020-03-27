@@ -1,9 +1,10 @@
-[![Build Status](https://travis-ci.org/ergopkg/sbpool.svg)](https://travis-ci.org/valyala/fastrand)
-[![GoDoc](https://godoc.org/github.com/ergopkg/sbpool?status.svg)](http://godoc.org/github.com/valyala/fastrand)
-[![Go Report](https://goreportcard.com/badge/github.com/ergopkg/sbpool)](https://goreportcard.com/report/github.com/valyala/fastrand)
+[![Build Status](https://travis-ci.org/ergopkg/sbpool.svg)](https://travis-ci.org/ergopkg/sbpool)
+[![GoDoc](https://godoc.org/github.com/ergopkg/sbpool?status.svg)](http://godoc.org/github.com/ergopkg/sbpool)
+[![Go Report](https://goreportcard.com/badge/github.com/ergopkg/sbpool)](https://goreportcard.com/report/github.com/ergopkg/sbpool)
 
 # sbpool
-Easy to use strings builder pool
+
+Easy to use strings.Builder pool
 
 ### Example
 
@@ -32,7 +33,8 @@ func main() {
 
 ### Concurrency supporting
 
-As `bytes.Buffer`, the `strings.Builder` doesn’t support concurrency when writing and reading. So we should take care it if we need them.
+As `bytes.Buffer`, the `strings.Builder` doesn’t support concurrency when writing and reading. 
+So we should take care it if we need them.
 We can try a little bit with `strings.Builder` to add `10000` character, at the same time.
 
 ```go
@@ -73,14 +75,14 @@ go run main.go => 7623
 
 ### io.Writer interface
 
-The io.Writer interface is implemented on `strings.Builder` with `Write()` method `Write(p []byte) (n int, err error)`. 
+The `io.Writer` interface is implemented on `strings.Builder` with `Write()` method `Write(p []byte) (n int, err error)`. 
 So, we have a lot of useful case with `io.Writer`:
 
  - `io.Copy(dst Writer, src Reader) (written int64, err error)`
  - `bufio.NewWriter(w io.Writer) *Writer`
  - `fmt.Fprint(w io.Writer, a …interface{}) (n int, err error)`
  - `func (r *http.Request) Write(w io.Writer) error`
- - and other libraries that uses io.Writer
+ - and other libraries that uses `io.Writer`
  
 ### Usefull articles
 
